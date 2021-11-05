@@ -75,3 +75,4 @@ function! s:build_tasks()
 endfunction
 
 command! ASTasksCargoBuild call s:build_tasks()
+
