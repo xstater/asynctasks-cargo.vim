@@ -18,14 +18,14 @@ This plugin only provide a new command
 ```
 :ASTasksCargoBuild
 ```
-Execute this command will auto generate the task.ini file in your rust project  
-You can change this file by changing `g:asynctasks_config_name`  
+Execute this command will auto generate the task.ini file in your rust project.  
+You can change this file by changing `g:asynctasks_config_name`.  
 For my config
 ```
 let g:asynctasks_config_name = '.git/tasks.ini'
 ```
 Just throw this file to VCS directory, so it will not pollute your project.  
-To automatically execute command when save buffer
+To automatically execute command when save buffer:
 ```
 autocmd BufWrite * ASTasksCargoBuild
 ```
