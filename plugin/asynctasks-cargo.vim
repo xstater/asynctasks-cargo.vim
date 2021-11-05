@@ -61,17 +61,14 @@ endfunction
 function! s:build_tasks()
     let l:root = s:find_root()
     if l:root == ''
-        echo "no file will be generate"
         " Don't generate .task file if not rust project
         return 0
     endif
-    echo "found root:" . l:root
     let l:exmaples = s:get_examples(l:root)
     let l:text = s:gen_example_tasks(l:exmaples)
     let l:separator = s:separator()
     let l:config_file = l:root . l:separator . g:asynctasks_config_name
     call s:write_to_file(l:config_file,l:text)
-    echo l:config_file . " generated"
 endfunction
 
 command! ASTasksCargoBuild call s:build_tasks()
