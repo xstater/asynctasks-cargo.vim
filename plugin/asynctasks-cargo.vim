@@ -49,6 +49,7 @@ function! s:gen_example_tasks(list)
         let l:raw_texts += ["[cargo-example-" . l:example . "]"]
         let l:raw_texts += ["command = cargo run --example " . l:example]
         let l:raw_texts += ["root = <cwd>"]
+        let l:raw_texts += ["output = terminal"]
         let l:raw_texts += [""]
     endfor
     return l:raw_texts
